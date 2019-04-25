@@ -14,8 +14,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faTimes } from '@fortawesome/free-solid-svg-icons';
 library.add(faStar, faTimes);
 
-Modal.setAppElement('#root');
-
 class MovieDetails extends Component {
   constructor(props) {
     super(props);
