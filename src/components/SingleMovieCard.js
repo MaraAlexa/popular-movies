@@ -12,8 +12,8 @@ const SingleMovieCard = ({ imageUrl, movieTitle }) => {
 };
 
 SingleMovieCard.propTypes = {
-  imageUrl: PropTypes.string.isRequired,
-  movieTitle: PropTypes.string.isRequired
+  imageUrl: PropTypes.string,
+  movieTitle: PropTypes.string
 };
 
 export default SingleMovieCard;

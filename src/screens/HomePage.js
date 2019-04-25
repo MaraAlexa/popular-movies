@@ -70,6 +70,7 @@ class HomePage extends Component {
         </div>
       );
     }
+    console.log('popularMovie', popularMovies);
     return (
       <div className='home-page'>
         <h1 className='app-title'>Popular Movies</h1>
