@@ -22,7 +22,8 @@ class HomePage extends Component {
       popularMovies: [],
       popularSeries: [],
       familyMovies: [],
-      documentaries: []
+      documentaries: [],
+      isLoading: true
     };
   }
 
@@ -43,7 +44,8 @@ class HomePage extends Component {
         popularMovies: popularMovies.results,
         popularSeries: popularSeries.results,
         familyMovies: familyMovies.results,
-        documentaries: documentaries.results
+        documentaries: documentaries.results,
+        isLoading: false
       });
     } catch (err) {
       console.log(err);
@@ -55,8 +57,19 @@ class HomePage extends Component {
       popularMovies,
       popularSeries,
       familyMovies,
-      documentaries
+      documentaries,
+      isLoading
     } = this.state;
+    if (isLoading) {
+      return (
+        <div className='app-loader'>
+          <img
+            src='https://media.giphy.com/media/uyCJt0OOhJBiE/giphy.gif'
+            alt='loading spinner'
+          />
+        </div>
+      );
+    }
     return (
       <div className='home-page'>
         <h1 className='app-title'>Popular Movies</h1>

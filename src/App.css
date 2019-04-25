@@ -12,11 +12,20 @@ html {
   background-color: var(--black);
   height: 100vh;
 }
-
+.app-loader {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-loader img {
+  width: 100px;
+}
 .App {
   text-align: center;
   padding: 2.5em;
   color: var(--white);
+  height: 100vh;
 }
 
 .header {
