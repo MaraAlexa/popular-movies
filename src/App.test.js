@@ -1,16 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { shallow, mount } from 'enzyme';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import Search from '../src/screens/Search';
 import SliderComponent from '../src/components/SliderComponent';
-
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
 
 it('renders without crashing Shallow', () => {
   shallow(<App />);
@@ -18,7 +11,6 @@ it('renders without crashing Shallow', () => {
 
 describe('Clear Button functionality', () => {
   it('should verify that the clear button resets the query state', () => {
-    // set a query value
     const query = 'test';
 
     const searchComponent = mount(<Search />);
@@ -60,7 +52,7 @@ describe('That the SliderComponent renders ', () => {
       </Router>
     );
 
-    // Expect to render exacly 3 list items
+    // Expect to render exacly 3 slick slides
     expect(
       sliderComponent.find('.slick-slide').not('.slick-cloned').length
     ).toBe(3);
