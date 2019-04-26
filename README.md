@@ -28,12 +28,16 @@ In the terminal, navigate to the root project folder:
 
 Inside the _src_ folder I made _components_, _screens_ and _api_ folders
 
+The _screens_ folder contains all the Views of the app
+
+The _components_ folder contains reusable components (SliderComponent and SingleCardMovie) and the Player component
+
+The _api_ folder contains the api calls
+
 ## Project Implementation details
 
 1. This project is working for _Google Chrome v49_ or higher
 
-2. The project is fully responsive and includes the optional Search bar feature
+2. The project is fully responsive and includes the optional Search bar functionality and 2 unit tests.
 
-3. For styling I used plain css. For bigger project I would use styled-components library
-
-4. To persist the data when refresing the MovieDetails page, I used localStorage to save the item. In a bigger project I would use Redux with Redux Persist.
+3. To persist the data when refresing the MovieDetails page, I used localStorage to save the item. In a bigger project I would use Redux with Redux Persist.
