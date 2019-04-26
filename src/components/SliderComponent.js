@@ -1,14 +1,8 @@
-// packages
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-
-// components
 import Slider from 'react-slick';
 import SingleMovieCard from './SingleMovieCard';
-
 import { IMG_URL } from '../constants';
-
-// styles
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import '../App.css';

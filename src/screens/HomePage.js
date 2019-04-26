@@ -1,16 +1,9 @@
-// packages
 import React, { Component } from 'react';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-
-// components
 import SliderComponent from '../components/SliderComponent';
-
-// api calls
 import getPopularByCategory from '../api/getPopularByCategory';
 import getPopularByGenre from '../api/getPopularByGenre';
-
-// constants
 import { MOVIES, SERIES, DOCUMENTARY_GENRE, FAMILY_GENRE } from '../constants';
 
 class HomePage extends Component {

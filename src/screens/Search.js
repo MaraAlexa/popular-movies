@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import '../../src/App.css';
 import getSearchResults from '../api/getSearchResults';
-
-// components
 import SliderComponent from '../components/SliderComponent';
-
 // font awesome
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

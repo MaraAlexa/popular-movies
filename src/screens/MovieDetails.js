@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { IMG_URL } from '../constants';
-
-import Modal from 'react-modal';
 import '../../src/App.css';
-
-// components
+import { IMG_URL } from '../constants';
+import Modal from 'react-modal';
 import Player from '../components/Player';
-
 // font awesome
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -93,8 +88,6 @@ class MovieDetails extends Component {
   }
 }
 
-MovieDetails.propTypes = {
-  item: PropTypes.array
-};
+MovieDetails.propTypes = {};
 
 export default MovieDetails;
