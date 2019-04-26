@@ -5,13 +5,11 @@ It uses **The Movie Data Base API** v3
 
 ## How to run the repo
 
-1. Clone the repo
+In the terminal, navigate to the root project folder:
 
-2. In the terminal:
-
-- navigate to the project folder
-- npm install
-- npm start
+- Clone the repo by executing `git clone https://github.com/MaraAlexa/popular-movies.git`
+- Install node modules by executing `yarn install`
+- Start application locally by executing `yarn start`
 
 ## Project Setup details
 
@@ -19,14 +17,14 @@ It uses **The Movie Data Base API** v3
 2. Added ESLint config
 3. Installed on top of create-react-app the following packages:
 
-   - react-modal for the modal
-   - react-slick for the carousels
-   - shaka-player for playing the video trailer
+   - react-modal for the video trailer modal screen
+   - react-slick for image carousels
+   - shaka-player for playing video
    - font-awesome for icons
 
 ## File Structure
 
-_src_ folder is the root level of the app. Here is where the app lives.
+`src` folder is the root level of the app. Here is where the app lives.
 
 Inside the _src_ folder I made _components_, _screens_ and _api_ folders
 
@@ -38,6 +36,4 @@ Inside the _src_ folder I made _components_, _screens_ and _api_ folders
 
 3. For styling I used plain css. For bigger project I would use styled-components library
 
-4. To persist the data when refresing the MovieDetails page, I used localStorage to save the item. In real project I would have used Redux but since this is a small project I chose use just React
-
-5. For displaying the MovieDetails Page I used the same data that I am using for diplaying the Home page as I didn't want to make a new API call.
+4. To persist the data when refresing the MovieDetails page, I used localStorage to save the item. In a bigger project I would use Redux with Redux Persist.
