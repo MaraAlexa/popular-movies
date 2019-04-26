@@ -63,43 +63,33 @@ class Search extends Component {
     const { query, items, hasResults } = this.state;
 
     return (
-      <div className='search-bar-page'>
-        <h2 className='search'>SEARCH</h2>
-        <div className='search-bar'>
+      <div className="search-bar-page">
+        <h2 className="search">SEARCH</h2>
+        <div className="search-bar">
           <input
-            type='search'
-            aria-label='search'
+            type="search"
+            aria-label="search"
             aria-required
-            className='search-input'
+            className="search-input"
             autoFocus
             value={query}
-            placeholder='Search...'
+            placeholder="Search..."
             onChange={this.handleInputChange}
             onKeyUp={this.handleOnKeyUp}
           />
-          <div className='buttons-wrapper'>
+          <div className="buttons-wrapper">
             {query.length > 0 && (
-              <button
-                className='clear-button'
-                aria-label='cancel'
-                type='button'
-                onClick={this.handleClearInput}
-              >
-                <FontAwesomeIcon icon='times' className='times-icon' />
+              <button className="clear-button" aria-label="cancel" type="button" onClick={this.handleClearInput}>
+                <FontAwesomeIcon icon="times" className="times-icon" />
               </button>
             )}
-            <button
-              className='input-submit'
-              aria-label='search'
-              type='submit'
-              onClick={this.handleSubmit}
-            >
+            <button className="input-submit" aria-label="search" type="submit" onClick={this.handleSubmit}>
               Submit
             </button>
           </div>
         </div>
 
-        {items.length > 0 && <h3 className='search'>Search results</h3>}
+        {items.length > 0 && <h3 className="search">Search results</h3>}
         {items.length > 0 && <SliderComponent data={items} />}
         {hasResults === false && <h3>No results found!</h3>}
       </div>

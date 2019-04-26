@@ -7,9 +7,9 @@ import Search from './screens/Search';
 
 export const Routes = (
   <Switch>
-    <Route exact path='/' component={HomePage} />
-    <Route path='/detail/:movie_id' component={MovieDetails} />
-    <Route path='/search' render={() => <Search />} />
+    <Route exact path="/" component={HomePage} />
+    <Route path="/detail/:movie_id" component={MovieDetails} />
+    <Route path="/search" render={() => <Search />} />
     <Route render={() => <h1>Page not found</h1>} />
   </Switch>
 );

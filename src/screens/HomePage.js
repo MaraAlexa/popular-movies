@@ -29,12 +29,7 @@ class HomePage extends Component {
 
   async componentDidMount() {
     try {
-      let [
-        popularMovies,
-        popularSeries,
-        familyMovies,
-        documentaries
-      ] = await Promise.all([
+      let [popularMovies, popularSeries, familyMovies, documentaries] = await Promise.all([
         getPopularByCategory(MOVIES),
         getPopularByCategory(SERIES),
         getPopularByGenre(FAMILY_GENRE),
@@ -53,40 +48,25 @@ class HomePage extends Component {
   }
 
   render() {
-    const {
-      popularMovies,
-      popularSeries,
-      familyMovies,
-      documentaries,
-      isLoading
-    } = this.state;
+    const { popularMovies, popularSeries, familyMovies, documentaries, isLoading } = this.state;
     if (isLoading) {
       return (
-        <div className='app-loader'>
-          <img
-            src='https://media.giphy.com/media/uyCJt0OOhJBiE/giphy.gif'
-            alt='loading spinner'
-          />
+        <div className="app-loader">
+          <img src="https://media.giphy.com/media/uyCJt0OOhJBiE/giphy.gif" alt="loading spinner" />
         </div>
       );
     }
 
     return (
-      <div className='home-page'>
-        <h1 className='app-title'>Popular Movies</h1>
-        {popularMovies.length > 0 && (
-          <h3 className='subtitle'>Popular Movies</h3>
-        )}
+      <div className="home-page">
+        <h1 className="app-title">Popular Movies</h1>
+        {popularMovies.length > 0 && <h3 className="subtitle">Popular Movies</h3>}
         <SliderComponent data={popularMovies} />
-        {popularSeries.length > 0 && (
-          <h3 className='subtitle'>Popular Series</h3>
-        )}
+        {popularSeries.length > 0 && <h3 className="subtitle">Popular Series</h3>}
         <SliderComponent data={popularSeries} />
-        {familyMovies.length > 0 && <h3 className='subtitle'>Family</h3>}
+        {familyMovies.length > 0 && <h3 className="subtitle">Family</h3>}
         <SliderComponent data={familyMovies} />
-        {documentaries.length > 0 && (
-          <h3 className='subtitle'>Documentaries</h3>
-        )}
+        {documentaries.length > 0 && <h3 className="subtitle">Documentaries</h3>}
         <SliderComponent data={documentaries} />
       </div>
     );

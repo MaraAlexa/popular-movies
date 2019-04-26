@@ -70,12 +70,9 @@ class SliderComponent extends Component {
   render() {
     const items = this.props.data.map(item => {
       return (
-        <div key={item.id} className='movie-card'>
+        <div key={item.id} className="movie-card">
           <div onClick={() => this.handleCardClick(item)}>
-            <SingleMovieCard
-              movieTitle={item.original_name || item.original_title}
-              imageUrl={`${IMG_URL}${item.poster_path}`}
-            />
+            <SingleMovieCard movieTitle={item.original_name || item.original_title} imageUrl={`${IMG_URL}${item.poster_path}`} />
           </div>
         </div>
       );

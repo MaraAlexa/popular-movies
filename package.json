@@ -36,5 +36,13 @@
   "devDependencies": {
     "eslint-plugin-prettier": "^3.0.1",
     "prettier": "1.17.0"
+  },
+  "prettier": {
+    "printWidth": 160,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "semi": true
   }
 }

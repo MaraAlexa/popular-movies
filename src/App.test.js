@@ -53,8 +53,6 @@ describe('That the SliderComponent renders ', () => {
     );
 
     // Expect to render exacly 3 slick slides
-    expect(
-      sliderComponent.find('.slick-slide').not('.slick-cloned').length
-    ).toBe(3);
+    expect(sliderComponent.find('.slick-slide').not('.slick-cloned').length).toBe(3);
   });
 });

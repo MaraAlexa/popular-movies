@@ -63,16 +63,8 @@ class Player extends Component {
   render() {
     const { posterPath } = this.props;
     return (
-      <div className='player'>
-        <video
-          crossOrigin='anonymous'
-          id='video'
-          width='100%'
-          height='100%'
-          poster={`${IMG_URL}${posterPath}`}
-          controls
-          autoPlay
-        />
+      <div className="player">
+        <video crossOrigin="anonymous" id="video" width="100%" height="100%" poster={`${IMG_URL}${posterPath}`} controls autoPlay />
       </div>
     );
   }

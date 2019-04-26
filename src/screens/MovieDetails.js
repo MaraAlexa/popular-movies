@@ -21,9 +21,7 @@ class MovieDetails extends Component {
 
     this.state = {
       modalIsOpen: false,
-      item: localStorage.getItem('item')
-        ? JSON.parse(localStorage.getItem('item'))
-        : item
+      item: localStorage.getItem('item') ? JSON.parse(localStorage.getItem('item')) : item
     };
   }
 
@@ -50,18 +48,12 @@ class MovieDetails extends Component {
     const { item } = this.state;
     return (
       <div>
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
-          contentLabel='Player Modal'
-        >
-          <div className='modal-header'>
-            <h2 className='modal-title'>
-              {item.original_name || item.original_title}
-            </h2>
-            <div className='close-button-wrapper'>
-              <button className='close-button' onClick={this.closeModal}>
-                <FontAwesomeIcon icon='times' />
+        <Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal} contentLabel="Player Modal">
+          <div className="modal-header">
+            <h2 className="modal-title">{item.original_name || item.original_title}</h2>
+            <div className="close-button-wrapper">
+              <button className="close-button" onClick={this.closeModal}>
+                <FontAwesomeIcon icon="times" />
               </button>
             </div>
           </div>
@@ -69,36 +61,30 @@ class MovieDetails extends Component {
           <Player posterPath={item.poster_path} />
         </Modal>
 
-        <div className='movie_wrapper'>
-          <div className='movie-details'>
-            <h1 className='movie_title'>
-              {item.original_name || item.original_title}
-            </h1>
-            <p className='overview'>{item.overview}</p>
+        <div className="movie_wrapper">
+          <div className="movie-details">
+            <h1 className="movie_title">{item.original_name || item.original_title}</h1>
+            <p className="overview">{item.overview}</p>
 
-            <div className='metadata'>
-              <p className='release_date'>Release date: {item.release_date}</p>
-              <p className='vote_average'>
+            <div className="metadata">
+              <p className="release_date">Release date: {item.release_date}</p>
+              <p className="vote_average">
                 Stars:
-                <span className='star-icon'>
-                  <FontAwesomeIcon icon='star' />
+                <span className="star-icon">
+                  <FontAwesomeIcon icon="star" />
                 </span>
                 {item.vote_average}
               </p>
             </div>
-            <div className='button_wrapper'>
-              <button className='play_button' onClick={this.openModal}>
+            <div className="button_wrapper">
+              <button className="play_button" onClick={this.openModal}>
                 Watch Movie
               </button>
             </div>
           </div>
 
-          <div className='image_wrapper'>
-            <img
-              className='poster'
-              src={`${IMG_URL}${item.poster_path}`}
-              alt='movie poster'
-            />
+          <div className="image_wrapper">
+            <img className="poster" src={`${IMG_URL}${item.poster_path}`} alt="movie poster" />
           </div>
         </div>
       </div>
