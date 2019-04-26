@@ -18,7 +18,7 @@ class Player extends Component {
     }
   }
 
-  initPlayer() {
+  initPlayer = () => {
     var video = document.getElementById('video');
     var player = new shaka.Player(video);
 
@@ -43,22 +43,17 @@ class Player extends Component {
         }
       })
       .catch(this.onError); // onError is executed if the asynchronous load fails.
-  }
+  };
 
-  onErrorEvent(event) {
+  onErrorEvent = event => {
     // Extract the shaka.util.Error object from the event.
     this.onError(event.detail);
-  }
+  };
 
-  onError(error) {
+  onError = error => {
     // Log the error
     console.error('Error code', error.code, 'object', error);
-  }
-
-  componentWillUnmount() {
-    // unmount stuff
-    // kill stream hogging
-  }
+  };
 
   render() {
     const { posterPath } = this.props;
