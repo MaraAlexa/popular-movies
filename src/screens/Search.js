@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../../src/App.css';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import getSearchResults from '../api/getSearchResults';
 
 // components
@@ -29,7 +29,6 @@ class Search extends Component {
   };
   handleOnKeyUp = e => {
     if (e.key === 'Enter') {
-      console.log('do validate');
       this.handleSubmit();
     }
   };
@@ -108,10 +107,6 @@ class Search extends Component {
   }
 }
 
-Search.propTypes = {
-  query: PropTypes.string,
-  items: PropTypes.array,
-  hasResults: PropTypes.bool
-};
+Search.propTypes = {};
 
 export default Search;

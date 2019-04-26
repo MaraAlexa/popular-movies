@@ -6,4 +6,4 @@ export const DOCUMENTARY_GENRE = 99;
 export const FAMILY_GENRE = 10751;
 export const IMG_URL = 'http://image.tmdb.org/t/p/original';
 export const VIDEO_URL =
-  '//storage.googleapis.com/shaka-demo-assets/sintel/dash.mpd';
+  'https://storage.googleapis.com/shaka-demo-assets/sintel/dash.mpd';

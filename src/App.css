@@ -4,7 +4,6 @@
   --darkRed: #980204;
   --black: #000000;
   --yellow: #f2b01e;
-  --gray: #505050;
   --lightGray: #787878;
 }
 
@@ -39,7 +38,6 @@ ul {
   color: var(--white);
   text-decoration: none;
   list-style-type: none;
-  /* font-size: 25px; */
   font-size: 1.5em;
 }
 
@@ -72,7 +70,6 @@ h3.subtitle {
 img.card-image {
   width: 100%;
   height: 260px;
-  /* height: 280px; */
   vertical-align: 0px;
   transition: all 0.3s;
 }
@@ -210,8 +207,8 @@ input[type='search']::-webkit-search-cancel-button {
 }
 .search-input {
   width: 100%;
-  font-size: 17px;
-  color: var(--gray);
+  font-size: 1em;
+  color: var(--lightGray);
   background: none;
   border-radius: 3px;
   height: 45px;
@@ -223,34 +220,31 @@ input[type='search']::-webkit-search-cancel-button {
   background-color: var(--white);
 }
 .clear-button {
-  position: absolute;
-  right: 0;
-  top: 0px;
   padding: 12px;
-  font-size: 20px;
   margin-right: 100px;
   border: none;
   z-index: 100;
-  background: transparent;
   color: var(--lightGray);
   outline: none;
-  cursor: pointer;
 }
 .input-submit {
   width: 100px;
   height: 45px;
-  background: transparent;
   border: none;
   border: 1px solid var(--white);
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #fff;
-  font-size: 20px;
+  color: var(--white);
   font-weight: 200;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+.clear-button,
+.input-submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background: transparent;
+  font-size: 1.25em;
 }
 
 @media (max-width: 768px) {

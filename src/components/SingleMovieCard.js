@@ -5,8 +5,10 @@ import '../../src/App.css';
 const SingleMovieCard = ({ imageUrl, movieTitle }) => {
   return (
     <div className='movie-card'>
-      <img className='card-image' src={imageUrl} alt='movie poster' />
-      <h3 className='movie-title'>{movieTitle}</h3>
+      {imageUrl && (
+        <img className='card-image' src={imageUrl} alt='movie poster' />
+      )}
+      {movieTitle && <h3 className='movie-title'>{movieTitle}</h3>}
     </div>
   );
 };

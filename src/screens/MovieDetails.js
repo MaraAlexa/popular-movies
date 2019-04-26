@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { IMG_URL } from '../constants';
 
 import Modal from 'react-modal';
 import '../../src/App.css';
 
 // components
-import Player from './Player';
+import Player from '../components/Player';
 
 // font awesome
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -30,6 +30,8 @@ class MovieDetails extends Component {
   componentDidMount() {
     // Remember state for the next mount
     localStorage.setItem('item', JSON.stringify(this.state.item));
+    // setup the Modal comp
+    Modal.setAppElement('#root');
   }
 
   componentWillUnmount() {
@@ -104,6 +106,8 @@ class MovieDetails extends Component {
   }
 }
 
-MovieDetails.propTypes = {};
+MovieDetails.propTypes = {
+  item: PropTypes.array
+};
 
 export default MovieDetails;
