@@ -1,6 +1,5 @@
 // packages
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 

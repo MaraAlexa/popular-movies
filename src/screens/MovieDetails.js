@@ -26,9 +26,10 @@ class MovieDetails extends Component {
   }
 
   componentDidMount() {
-    // Remember state for the next mount
+    // Remember movie item for the next mount
     localStorage.setItem('item', JSON.stringify(this.state.item));
-    // setup the Modal comp
+
+    // Bind modal to appElement
     Modal.setAppElement('#root');
   }
 

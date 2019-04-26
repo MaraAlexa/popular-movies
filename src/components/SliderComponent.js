@@ -62,7 +62,7 @@ const settings = {
 class SliderComponent extends Component {
   handleCardClick = item => {
     this.props.history.push({
-      pathname: '/detail/' + item.id,
+      pathname: `/detail/${item.id}`,
       item
     });
   };

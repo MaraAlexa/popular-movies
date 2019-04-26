@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../../src/App.css';
-// import PropTypes from 'prop-types';
 import getSearchResults from '../api/getSearchResults';
 
 // components
