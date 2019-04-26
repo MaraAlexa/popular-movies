@@ -28,7 +28,7 @@ In the terminal, navigate to the root project folder:
 
 Inside the _src_ folder I made _components_, _screens_ and _api_ folders
 
-The _screens_ folder contains all the Views of the app
+The _screens_ folder contains all the Views of the app (HomePage, MovieDetails page and Search page)
 
 The _components_ folder contains reusable components (SliderComponent and SingleCardMovie) and the Player component
 
